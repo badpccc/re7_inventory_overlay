@@ -1,0 +1,54 @@
+# Build
+build/
+out/
+bin/
+obj/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Makefile
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Compiled binaries
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.obj
+*.lib
+
+# Debug / Release
+Debug/
+Release/
+x64/
+x86/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Local configuration
+config.local.json

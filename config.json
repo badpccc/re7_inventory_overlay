@@ -1,0 +1,11 @@
+{
+    "enabled": true,
+    "x": 50,
+    "y": 50,
+    "scale": 1.0,
+    "spacing": 10,
+    "icon_size": 64,
+    "show_quantity": true,
+    "show_name": true,
+    "show_collected": true
+}
