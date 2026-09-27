@@ -1,5 +1,7 @@
 # RE7 Inventory Overlay
 
+---
+
 A Resident Evil 7 inventory overlay project built with **REFramework + Lua + C++**, focused on reading the game's internal inventory structures externally and displaying their contents through a real-time overlay.
 
 The project is currently in the **prototype / reverse-engineering stage**. The game's inventory structure has been identified and successfully accessed at runtime. The current implementation can read the player's inventory externally and display its contents in a standalone overlay window.
@@ -7,6 +9,8 @@ The project is currently in the **prototype / reverse-engineering stage**. The g
 ---
 
 ## Overview
+
+---
 
 The main goal of this project is to create a real-time inventory overlay for **Resident Evil 7**.
 
@@ -31,6 +35,8 @@ The inventory is continuously monitored and the overlay updates automatically wh
 
 ## Requirements
 
+---
+
 * Resident Evil 7
 * [REFramework](https://github.com/praydog/REFramework)
 * C++17 compatible compiler
@@ -41,6 +47,8 @@ The inventory is continuously monitored and the overlay updates automatically wh
 ---
 
 ## REFramework Setup
+
+---
 
 Start **Resident Evil 7** with **REFramework** installed.
 
@@ -70,7 +78,11 @@ END
 
 ## Building
 
+---
+
 ### Requirements
+
+---
 
 Make sure you have the following installed:
 
@@ -80,6 +92,8 @@ Make sure you have the following installed:
 * **Git**
 
 ### Create the Build Directory
+
+---
 
 Open **PowerShell** in the directory where you cloned or extracted the project.
 
@@ -102,6 +116,8 @@ cd build
 
 ### Configure the Project
 
+---
+
 Run CMake to configure the project:
 
 ```powershell
@@ -109,6 +125,8 @@ cmake ..
 ```
 
 ### Build the Project
+
+---
 
 Build the project in **Release** mode:
 
@@ -131,6 +149,8 @@ The exact location of `re7_inventory_overlay` depends on where you selected to c
 
 ## Clean Build
 
+---
+
 If you want to perform a completely clean build, open PowerShell in the project's directory and run:
 
 ```powershell
@@ -146,6 +166,8 @@ cmake --build . --config Release
 ---
 
 ## Running
+
+---
 
 Before running the executable, make sure:
 
