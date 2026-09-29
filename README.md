@@ -182,6 +182,12 @@ The inventory is then read continuously and the overlay updates automatically wh
 
 ---
 
+## Preview
+
+![RE7 Inventory Overlay Test](assets/images/overlaytest.png)
+
+---
+
 ## Credits
 
 ### RE7 3D Item Icons
