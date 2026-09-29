@@ -26,4 +26,5 @@ target_link_libraries(
 
     user32
     gdi32
+    gdiplus
 )

@@ -2,6 +2,9 @@
 #include "overlay.h"
 
 #include <windows.h>
+#include <gdiplus.h>
+
+#pragma comment(lib, "gdiplus.lib")
 
 
 int WINAPI WinMain(
@@ -11,6 +14,30 @@ int WINAPI WinMain(
     int
 )
 {
+    Gdiplus::GdiplusStartupInput gdiplus_input{};
+
+    ULONG_PTR gdiplus_token = 0;
+
+    if (
+        Gdiplus::GdiplusStartup(
+            &gdiplus_token,
+            &gdiplus_input,
+            nullptr
+        ) != Gdiplus::Ok
+    )
+    {
+        MessageBoxA(
+            nullptr,
+            "Nao foi possivel inicializar o GDI+.",
+            "RE7 Inventory",
+            MB_OK |
+            MB_ICONERROR
+        );
+
+        return 1;
+    }
+
+
     InventoryReader inventory;
 
 
@@ -21,7 +48,6 @@ int WINAPI WinMain(
             "Verifique se:\n"
             "- RE7 esta aberto\n"
             "- REFramework esta aberto\n"
-            "- RUN TEST foi executado\n"
             "- re7_menu_manager.txt existe";
 
 
@@ -34,6 +60,11 @@ int WINAPI WinMain(
         );
 
 
+        Gdiplus::GdiplusShutdown(
+            gdiplus_token
+        );
+
+
         return 1;
     }
 
@@ -41,10 +72,12 @@ int WINAPI WinMain(
     Overlay overlay;
 
 
-    if (!overlay.initialize(
-        instance,
-        &inventory
-    ))
+    if (
+        !overlay.initialize(
+            instance,
+            &inventory
+        )
+    )
     {
         MessageBoxA(
             nullptr,
@@ -52,6 +85,11 @@ int WINAPI WinMain(
             "RE7 Inventory",
             MB_OK |
             MB_ICONERROR
+        );
+
+
+        Gdiplus::GdiplusShutdown(
+            gdiplus_token
         );
 
 
@@ -63,6 +101,11 @@ int WINAPI WinMain(
 
 
     overlay.shutdown();
+
+
+    Gdiplus::GdiplusShutdown(
+        gdiplus_token
+    );
 
 
     return 0;
