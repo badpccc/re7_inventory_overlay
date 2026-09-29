@@ -179,3 +179,19 @@ The inventory overlay window should appear.
 The C++ application reads the `MenuManager` address generated automatically by the REFramework bridge and connects to the running **Resident Evil 7** process.
 
 The inventory is then read continuously and the overlay updates automatically when the inventory changes.
+
+---
+
+## Credits
+
+### RE7 3D Item Icons
+
+Special thanks to **Ryan155194** for the collaboration and for providing access to the 3D item icons used by this project.
+
+**Original work:**  
+[RE7 3D Icons Overhaul](https://www.nexusmods.com/residentevil7/mods/264)
+
+**Creator:**  
+[Ryan155194](https://forums.nexusmods.com/profile/194413794-ryan155194/)
+
+The 3D item icon assets are credited to their original creator and are not claimed as original assets of this project.
